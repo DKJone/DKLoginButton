@@ -22,7 +22,7 @@ I made them as classes and you can use it with ease.
 [Objective-C version is here.](https://github.com/wwdc14/HySubmitTransitionObjective-C)
 
 # Demo
-![Demo GIF Animation](https://github.com/entotsu/TKSubmitTransition/blob/master/demo.gif "Demo GIF Animation")
+![Demo GIF Animation](https://d13yacurqjgara.cloudfront.net/users/62319/screenshots/1945593/shot.gif "Demo GIF Animation")
 
 # Installation
 	pod 'TKSubmitTransition'
