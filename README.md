@@ -1,5 +1,6 @@
-# DKLoginButton
-A  login button with Cool animation and easy to use
+DKLoginButton
+=======
+一款带有炫酷转场动画的登录按钮组件
 
 [![Platform](http://img.shields.io/badge/platform-ios-blue.svg?style=flat
 )](https://developer.apple.com/iphone/index.action)
@@ -9,69 +10,82 @@ A  login button with Cool animation and easy to use
 )](http://mit-license.org)
 [![CocoaPods](https://img.shields.io/cocoapods/v/TKSubmitTransition.svg)]()
 
-**Swift2.0!! :cat:**
+**语言:Swift2.0!! :cat:**
 
-Inpired by https://dribbble.com/shots/1945593-Login-Home-Screen
+灵感来自于  https://dribbble.com/shots/1945593-Login-Home-Screen
 
-I created Animated UIButton of Loading Animation and Transition Animation.
+本项目中实现了带有动画和桩长效果的按钮，一般用于 **登录/注销** 等操作
 
-As you can see in the GIF Animation Demo below, you can find the “Sign in” button rolling and after that, next UIViewController will fade-in. 
+正如你可以看到下面的GIF动画演示，你可以在按钮旋转效果后设置到具体的状态（失败和成功对应不同的动画）
 
-I made them as classes and you can use it with ease.
+这些效果封装在同一个内文件中，只要按钮继承自这个类机就可以很方便的使用这个动画效果
 
-[Objective-C version is here.](https://github.com/wwdc14/HySubmitTransitionObjective-C)
 
 # Demo
 ![Demo GIF Animation](https://d13yacurqjgara.cloudfront.net/users/62319/screenshots/1945593/shot.gif "Demo GIF Animation")
 
-# Installation
-	pod 'TKSubmitTransition'
+![image](https://raw.githubusercontent.com/wwdc14/TKSubmitTransitionObjective-C/master/Demo.gif)
+# cocopod添加方法
+	pod 'DKLoginButton'
 	use_frameworks!
+# 手动添加方法
+复制demo中的DKButton文件夹到项目即可
+# 用法
 
-# Usage
-
-## This is SubClass of UIButton
+## 这是 UIButton类的一个子类，使用前初始化并设置相关属性
 
 ``` swift
-btn = TKTransitionSubmitButton(frame: CGRectMake(0, 0, 44, 44))
+	override func viewDidLoad() {
+	super.viewDidLoad()
+	// 设置场景
+	UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: false)
+	let bg = UIImageView(image: UIImage(named: "Login"))
+	bg.frame = self.view.frame
+	self.view.addSubview(bg)
+	// 创建按钮
+	var btn = DKTransitionButton(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width - 64, height: 44))
+	btn.backgroundColor = UIColor(red: 1, green: 0, blue: 128.0 / 255.0, alpha: 1)
+	btn.center = self.view.center
+	btn.frame.bottom = self.view.frame.height - 60
+	btn.setTitle("Sign in", forState: .Normal)
+	btn.titleLabel?.font = UIFont(name: "HelveticaNeue-Light", size: 14)
+	btn.addTarget(self, action: #selector(onTapButton(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+	btn.spiner.spinnerColor = UIColor.blackColor()
+	self.view.addSubview(btn)
+	self.view.bringSubviewToFront(canlogin)
+}
 ```
 
-## Animation Method
+## 动画使用方法
 ``` swift
-func didStartYourLoading() {
-    btn.startLoadingAnimation()
-}
+	@IBAction func onTapButton(button: DKTransitionButton) {
+	// 开始加载动画
+	button.startLoadingAnimation()
 
-func didFinishYourLoading() {
-    btn.startFinishAnimation {
-	    //Your Transition
-		let secondVC = SecondViewController()
-		secondVC.transitioningDelegate = self
-		self.presentViewController(secondVC, animated: true, completion: nil)
-    }
+	if self.canlogin.on {
+	    // 成功，进行界面切换
+	button.startSwitchAnimation(1, completion: { () -> () in
+	let secondVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("SecondViewController")
+	secondVC.transitioningDelegate = self
+	self.presentViewControllerWithDKAnimation(secondVC, animated: false, completion: nil)
+	})
+	} else {
+    	// 失败返回并提示
+	    button.startShakeAnimation(1, completion: {
+	    // 提示登录失败
+	    print("badend")
+	    })
+	}
 }
 
 ```
 
-## TKFadeInAnimator
-This Library also supply fade-in Animator Class of `UIViewControllerAnimatedTransitioning`.
-
-Please use This for transition animation.
-
-### Usage
-
-#### please use UIViewControllerTransitioningDelegate
-> class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
-
-`secondVC.transitioningDelegate = self`
+## 返回到登陆的动画
 
 ``` swift
-// MARK: UIViewControllerTransitioningDelegate
-func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-    let fadeInAnimator = TKFadeInAnimator()
-    return fadeInAnimator
-}
-func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-    return nil
+@IBAction func onTapScreen() {
+    button.moveToCenterExpand(0) {
+	    self.dismissViewControllerAnimated(false, completion: nil)
+	}
 }
 ```
