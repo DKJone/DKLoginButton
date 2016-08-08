@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="loginbutton" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G3W-1t-dDi">
+                                <rect key="frame" x="-4" y="0.0" width="328" height="568"/>
+                            </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YaC-Dq-GUt">
+                                <rect key="frame" x="260" y="517" width="51" height="31"/>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="G3W-1t-dDi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="LSF-7Q-GLP"/>
+                            <constraint firstItem="G3W-1t-dDi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="LzM-Yz-3a5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="G3W-1t-dDi" secondAttribute="bottom" id="Zch-03-xTi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="G3W-1t-dDi" secondAttribute="trailing" constant="-20" id="coW-iR-m8A"/>
+                            <constraint firstItem="YaC-Dq-GUt" firstAttribute="top" secondItem="G3W-1t-dDi" secondAttribute="bottom" constant="-51" id="tH3-xB-K3c"/>
+                            <constraint firstItem="YaC-Dq-GUt" firstAttribute="leading" secondItem="G3W-1t-dDi" secondAttribute="trailing" constant="-64" id="yLy-nT-u7Y"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="canlogin" destination="YaC-Dq-GUt" id="Ziy-jz-7p2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="348" y="416"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="0et-Yj-JP1">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LDs-it-1mp" customClass="SecondViewController" customModule="loginbutton" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PXQ-TS-gpa"/>
+                        <viewControllerLayoutGuide type="bottom" id="oKE-5n-MoX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mze-XJ-Q8j">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4x-e5-KmD" customClass="DKTransitionButton" customModule="loginbutton" customModuleProvider="target">
+                                <rect key="frame" x="244" y="493" width="55" height="55"/>
+                                <color key="backgroundColor" red="1" green="0.047058823529411764" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="iNe-aW-nsH"/>
+                                    <constraint firstAttribute="height" constant="55" id="nDp-t2-c1c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTapScreen" destination="LDs-it-1mp" eventType="touchUpInside" id="IrJ-we-ZtY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Y4x-e5-KmD" secondAttribute="trailing" constant="5" id="E9j-4X-wHT"/>
+                            <constraint firstItem="oKE-5n-MoX" firstAttribute="top" secondItem="Y4x-e5-KmD" secondAttribute="bottom" constant="20" id="xQQ-Q7-QhW"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="button" destination="Y4x-e5-KmD" id="Wca-b6-jd1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dQB-9p-bp6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="721" y="411"/>
+        </scene>
+    </scenes>
+</document>
