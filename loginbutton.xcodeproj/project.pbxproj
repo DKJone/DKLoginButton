@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		044346661D406C60004A1EA3 /* DKViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044346651D406C60004A1EA3 /* DKViewControllerExt.swift */; };
+		044B2FC21D58872F00C5E1B5 /* CGRectEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B2FBD1D58872F00C5E1B5 /* CGRectEx.swift */; };
+		044B2FC31D58872F00C5E1B5 /* DKTransitionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B2FBE1D58872F00C5E1B5 /* DKTransitionButton.swift */; };
+		044B2FC41D58872F00C5E1B5 /* DKViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B2FBF1D58872F00C5E1B5 /* DKViewControllerExt.swift */; };
+		044B2FC51D58872F00C5E1B5 /* NSTimerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B2FC01D58872F00C5E1B5 /* NSTimerEx.swift */; };
+		044B2FC61D58872F00C5E1B5 /* SpinerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B2FC11D58872F00C5E1B5 /* SpinerLayer.swift */; };
 		04997B5C1D3F0A8F00D1FF45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04997B5B1D3F0A8F00D1FF45 /* AppDelegate.swift */; };
 		04997B5E1D3F0A8F00D1FF45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04997B5D1D3F0A8F00D1FF45 /* ViewController.swift */; };
 		04997B611D3F0A8F00D1FF45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04997B5F1D3F0A8F00D1FF45 /* Main.storyboard */; };
@@ -15,10 +19,6 @@
 		04997B661D3F0A8F00D1FF45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04997B641D3F0A8F00D1FF45 /* LaunchScreen.storyboard */; };
 		04997B711D3F0A9000D1FF45 /* loginbuttonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04997B701D3F0A9000D1FF45 /* loginbuttonTests.swift */; };
 		04997B7C1D3F0A9000D1FF45 /* loginbuttonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04997B7B1D3F0A9000D1FF45 /* loginbuttonUITests.swift */; };
-		04997B8B1D3F0AEF00D1FF45 /* DKTransitionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04997B8A1D3F0AEF00D1FF45 /* DKTransitionButton.swift */; };
-		04997B8D1D3F2E5800D1FF45 /* SpinerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04997B8C1D3F2E5800D1FF45 /* SpinerLayer.swift */; };
-		04997B901D3F2E8600D1FF45 /* CGRectEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04997B8E1D3F2E8600D1FF45 /* CGRectEx.swift */; };
-		04997B911D3F2E8600D1FF45 /* NSTimerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04997B8F1D3F2E8600D1FF45 /* NSTimerEx.swift */; };
 		04997B931D3F540300D1FF45 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04997B921D3F540300D1FF45 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		044346651D406C60004A1EA3 /* DKViewControllerExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKViewControllerExt.swift; sourceTree = "<group>"; };
+		044B2FBD1D58872F00C5E1B5 /* CGRectEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRectEx.swift; sourceTree = "<group>"; };
+		044B2FBE1D58872F00C5E1B5 /* DKTransitionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKTransitionButton.swift; sourceTree = "<group>"; };
+		044B2FBF1D58872F00C5E1B5 /* DKViewControllerExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKViewControllerExt.swift; sourceTree = "<group>"; };
+		044B2FC01D58872F00C5E1B5 /* NSTimerEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTimerEx.swift; sourceTree = "<group>"; };
+		044B2FC11D58872F00C5E1B5 /* SpinerLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinerLayer.swift; sourceTree = "<group>"; };
 		04997B581D3F0A8F00D1FF45 /* loginbutton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = loginbutton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04997B5B1D3F0A8F00D1FF45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04997B5D1D3F0A8F00D1FF45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,10 +58,6 @@
 		04997B771D3F0A9000D1FF45 /* loginbuttonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = loginbuttonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04997B7B1D3F0A9000D1FF45 /* loginbuttonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginbuttonUITests.swift; sourceTree = "<group>"; };
 		04997B7D1D3F0A9000D1FF45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04997B8A1D3F0AEF00D1FF45 /* DKTransitionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKTransitionButton.swift; sourceTree = "<group>"; };
-		04997B8C1D3F2E5800D1FF45 /* SpinerLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinerLayer.swift; sourceTree = "<group>"; };
-		04997B8E1D3F2E8600D1FF45 /* CGRectEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRectEx.swift; sourceTree = "<group>"; };
-		04997B8F1D3F2E8600D1FF45 /* NSTimerEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTimerEx.swift; sourceTree = "<group>"; };
 		04997B921D3F540300D1FF45 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +86,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		044B2FBC1D58872F00C5E1B5 /* DKbutton */ = {
+			isa = PBXGroup;
+			children = (
+				044B2FBD1D58872F00C5E1B5 /* CGRectEx.swift */,
+				044B2FBE1D58872F00C5E1B5 /* DKTransitionButton.swift */,
+				044B2FBF1D58872F00C5E1B5 /* DKViewControllerExt.swift */,
+				044B2FC01D58872F00C5E1B5 /* NSTimerEx.swift */,
+				044B2FC11D58872F00C5E1B5 /* SpinerLayer.swift */,
+			);
+			path = DKbutton;
+			sourceTree = "<group>";
+		};
 		04997B4F1D3F0A8F00D1FF45 = {
 			isa = PBXGroup;
 			children = (
@@ -109,7 +121,7 @@
 		04997B5A1D3F0A8F00D1FF45 /* loginbutton */ = {
 			isa = PBXGroup;
 			children = (
-				04997B891D3F0AA700D1FF45 /* button */,
+				044B2FBC1D58872F00C5E1B5 /* DKbutton */,
 				04997B5B1D3F0A8F00D1FF45 /* AppDelegate.swift */,
 				04997B5D1D3F0A8F00D1FF45 /* ViewController.swift */,
 				04997B921D3F540300D1FF45 /* SecondViewController.swift */,
@@ -137,18 +149,6 @@
 				04997B7D1D3F0A9000D1FF45 /* Info.plist */,
 			);
 			path = loginbuttonUITests;
-			sourceTree = "<group>";
-		};
-		04997B891D3F0AA700D1FF45 /* button */ = {
-			isa = PBXGroup;
-			children = (
-				04997B8E1D3F2E8600D1FF45 /* CGRectEx.swift */,
-				04997B8F1D3F2E8600D1FF45 /* NSTimerEx.swift */,
-				044346651D406C60004A1EA3 /* DKViewControllerExt.swift */,
-				04997B8C1D3F2E5800D1FF45 /* SpinerLayer.swift */,
-				04997B8A1D3F0AEF00D1FF45 /* DKTransitionButton.swift */,
-			);
-			name = button;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,13 +283,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				04997B5E1D3F0A8F00D1FF45 /* ViewController.swift in Sources */,
-				04997B911D3F2E8600D1FF45 /* NSTimerEx.swift in Sources */,
-				04997B901D3F2E8600D1FF45 /* CGRectEx.swift in Sources */,
-				044346661D406C60004A1EA3 /* DKViewControllerExt.swift in Sources */,
-				04997B8B1D3F0AEF00D1FF45 /* DKTransitionButton.swift in Sources */,
 				04997B931D3F540300D1FF45 /* SecondViewController.swift in Sources */,
-				04997B8D1D3F2E5800D1FF45 /* SpinerLayer.swift in Sources */,
+				044B2FC61D58872F00C5E1B5 /* SpinerLayer.swift in Sources */,
+				044B2FC21D58872F00C5E1B5 /* CGRectEx.swift in Sources */,
 				04997B5C1D3F0A8F00D1FF45 /* AppDelegate.swift in Sources */,
+				044B2FC51D58872F00C5E1B5 /* NSTimerEx.swift in Sources */,
+				044B2FC31D58872F00C5E1B5 /* DKTransitionButton.swift in Sources */,
+				044B2FC41D58872F00C5E1B5 /* DKViewControllerExt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
