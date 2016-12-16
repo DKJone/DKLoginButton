@@ -1,5 +1,5 @@
 DKLoginButton
-=======
+======
 一款带有炫酷转场动画的登录按钮组件
 
 [![Platform](http://img.shields.io/badge/platform-ios-blue.svg?style=flat
