@@ -23,7 +23,7 @@ class SecondViewController: UIViewController {
     }
 
     @IBAction func onTapScreen() {
-        button.moveToCenterExpand(0) {
+        button.moveToCenterExpand(0) {[unowned self] in
             self.dismiss(animated: false, completion: nil)
         }
 

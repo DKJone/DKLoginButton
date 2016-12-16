@@ -47,7 +47,6 @@ class ViewController: UIViewController {
         } else {
             // 失败返回并提示
             button.startShakeAnimation(1, completion: {
-
                 // 提示登录失败
                 print("badend")
             })
