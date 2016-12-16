@@ -10,7 +10,8 @@ DKLoginButton
 )](http://mit-license.org)
 [![CocoaPods](https://img.shields.io/cocoapods/v/TKSubmitTransition.svg)]()
 
-**语言:Swift2.0!! :cat:**
+**语言:Swift3.0!! :cat:**
+[Swift2.0](https://github.com/DKJone/DKLoginButton/tree/swift2.0)
 
 灵感来自于  https://dribbble.com/shots/1945593-Login-Home-Screen
 
