@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         btn.setTitle("Sign in", for: UIControlState())
         btn.titleLabel?.font = UIFont(name: "HelveticaNeue-Light", size: 14)
         btn.addTarget(self, action: #selector(onTapButton(_:)), for: UIControlEvents.touchUpInside)
-        btn.spiner.spinnerColor = UIColor.black
+        btn.spiner.spinnerColor = UIColor.white
         self.view.addSubview(btn)
         self.view.bringSubview(toFront: canlogin)
     }

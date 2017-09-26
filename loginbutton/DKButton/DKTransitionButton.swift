@@ -34,9 +34,9 @@ open class DKTransitionButton: UIButton, CAAnimationDelegate {
     let expandCurve = CAMediaTimingFunction(controlPoints: 0.95, 0.02, 1, 0.05)
     let shrinkDuration: CFTimeInterval = 0.2
     /// 设置圆角
-    @IBInspectable open var normalCornerRadius: CGFloat? = 0.0 {
+    @IBInspectable open var normalCornerRadius: CGFloat = 0.0 {
         didSet {
-            self.layer.cornerRadius = normalCornerRadius!
+            self.layer.cornerRadius = normalCornerRadius
         }
     }
 
@@ -57,9 +57,8 @@ open class DKTransitionButton: UIButton, CAAnimationDelegate {
         spiner.spinnerColor = spinnerColor
     }
     // MARK: - 动画
-    /**
-     Description: 开始缩小并旋转
-     */
+    
+    /// 开始缩小并旋转
     open func startLoadingAnimation() {
         self.isUserInteractionEnabled = false
         self.cachedTitle = title(for: UIControlState())
@@ -74,12 +73,12 @@ open class DKTransitionButton: UIButton, CAAnimationDelegate {
         })
 
     }
-    /**
-     Description: 加载动画结束,切换界面
-
-     - parameter delay:      延迟时间
-     - parameter completion: 完成时回调
-     */
+    
+    /// 加载动画结束,切换界面
+    ///
+    /// - Parameters:
+    ///   - delay: 延迟时间
+    ///   - completion: 完成时回调
     open func startSwitchAnimation(_ delay: TimeInterval, completion: (() -> ())?) {
         _ = Timer.schedule(delay: delay) { [unowned self] timer in
             self.succeedCompletion = completion
@@ -87,12 +86,12 @@ open class DKTransitionButton: UIButton, CAAnimationDelegate {
             self.spiner.stopAnimation()
         }
     }
-    /**
-     Description: 加载动画结束,返回原位并震动提醒
 
-     - parameter delay:      延迟时间
-     - parameter completion: 完成时回调
-     */
+    /// 加载动画结束,返回原位并震动提醒
+    ///
+    /// - Parameters:
+    ///   - delay: 延迟时间
+    ///   - completion: 完成时回调
     open func startShakeAnimation(_ delay: TimeInterval, completion: (() -> ())?) {
         self.failedCompletion = completion
         _ = Timer.schedule(delay: delay) { [unowned self] timer in
@@ -108,12 +107,12 @@ open class DKTransitionButton: UIButton, CAAnimationDelegate {
         }
     }
 
-    /**
-     Description: 动画停止了
-
-     - parameter anim: 执行的动画
-     - parameter flag: 是否完成
-     */
+    
+    /// 动画停止了
+    ///
+    /// - Parameters:
+    ///   - anim: 执行的动画
+    ///   - flag: 是否完成
     public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         let a = anim as! CABasicAnimation
         if a.keyPath == "transform.scale" {
@@ -124,16 +123,14 @@ open class DKTransitionButton: UIButton, CAAnimationDelegate {
         }
     }
 
-    /**
-     Description: 回到初始状态
-     */
+    /// 回到初始状态
     open func returnToOriginalState() {
         self.layer.removeAllAnimations()
         self.setTitle(self.cachedTitle, for: UIControlState())
         self.spiner.stopAnimation()
         self.isUserInteractionEnabled = true
     }
-    // 宽度变化动画-收缩
+    /// 宽度变化动画-收缩
     func shrink() {
         let shrinkAnim = CABasicAnimation(keyPath: "bounds.size.width")
         shrinkAnim.fromValue = frame.width
@@ -144,7 +141,7 @@ open class DKTransitionButton: UIButton, CAAnimationDelegate {
         shrinkAnim.isRemovedOnCompletion = false
         layer.add(shrinkAnim, forKey: shrinkAnim.keyPath)
     }
-    // 宽度变化动画-放大
+    /// 宽度变化动画-放大
     func deShrink() {
         let shrinkAnim = CABasicAnimation(keyPath: "bounds.size.width")
         shrinkAnim.fromValue = frame.height
@@ -155,9 +152,8 @@ open class DKTransitionButton: UIButton, CAAnimationDelegate {
         shrinkAnim.isRemovedOnCompletion = false
         layer.add(shrinkAnim, forKey: shrinkAnim.keyPath)
     }
-    /**
-     Description: 放大到全屏
-     */
+    
+    /// 放大到全屏
     func expand() {
         let expandAnim = CABasicAnimation(keyPath: "transform.scale")
         expandAnim.fromValue = 1.0
@@ -169,19 +165,17 @@ open class DKTransitionButton: UIButton, CAAnimationDelegate {
         expandAnim.isRemovedOnCompletion = false
         layer.add(expandAnim, forKey: expandAnim.keyPath)
     }
-
-    /**
-     Description: 震动动画,调用时添加以下代码
-     let animation=self.shakeAnimation(self.layer.frame,times:30,duration: 10.0,vigour: 0.102)
-     self.layer.addAnimation(animation, forKey: kCATransition)
-
-     - parameter frame:    需要震动的窗体
-     - parameter times:    震动次数
-     - parameter duration: 震动时间
-     - parameter vigour:   震动幅度
-
-     - returns: 震动动画
-     */
+    
+    /// 震动动画,调用时添加以下代码
+    /// example:
+    /// let animation=self.shakeAnimation(self.layer.frame,times:30,duration: 10.0,vigour: 0.102)
+    /// self.layer.addAnimation(animation, forKey: kCATransition)
+    /// - Parameters:
+    ///   - frame: 需要震动的窗体
+    ///   - times: 震动次数
+    ///   - duration: 震动时间
+    ///   - vigour: 震动幅度
+    /// - Returns: 震动动画
     func shakeAnimation(_ frame: CGRect, times: Int, duration: Double, vigour: CGFloat) -> CAKeyframeAnimation {
         let shakeAnimation = CAKeyframeAnimation(keyPath: "position")
 
@@ -197,12 +191,11 @@ open class DKTransitionButton: UIButton, CAAnimationDelegate {
         return shakeAnimation
     }
 
-    /**
-     跳转动画从原位置移动到屏幕中间并放大到全屏
-
-     - parameter delay:      延迟时间
-     - parameter completion: 动画完成执行的必报
-     */
+    /// 跳转动画从原位置移动到屏幕中间并放大到全屏
+    ///
+    /// - Parameters:
+    ///   - delay: 延迟时间
+    ///   - completion: 动画完成执行的闭包
     open func moveToCenterExpand(_ delay: TimeInterval, completion: (() -> ())?) {
         self.succeedCompletion = completion
         self.setTitle("", for: UIControlState())
