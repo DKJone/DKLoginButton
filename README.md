@@ -10,12 +10,13 @@ DKLoginButton
 )](http://mit-license.org)
 [![CocoaPods](https://img.shields.io/cocoapods/v/TKSubmitTransition.svg)]()
 
-**语言:Swift3.0!! :cat:**
+**语言:Swift4.0!! :cat:**
+[Swift3.2](https://github.com/DKJone/DKLoginButton)
 [Swift2.0](https://github.com/DKJone/DKLoginButton/tree/swift2.0)
 
 灵感来自于  https://dribbble.com/shots/1945593-Login-Home-Screen
 
-本项目中实现了带有动画和桩长效果的按钮，一般用于 **登录/注销** 等操作
+本项目中实现了带有动画效果的登录按钮，一般用于 **登录/注销** 等操作
 
 正如你可以看到下面的GIF动画演示，你可以在按钮旋转效果后设置到具体的状态（失败和成功对应不同的动画）
 
