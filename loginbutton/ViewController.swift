@@ -28,15 +28,15 @@ class ViewController: UIViewController {
         btn.setTitle("Sign in", for: UIControlState())
         btn.titleLabel?.font = UIFont(name: "HelveticaNeue-Light", size: 14)
         btn.addTarget(self, action: #selector(onTapButton(_:)), for: UIControlEvents.touchUpInside)
-        btn.spiner.spinnerColor = UIColor.black
+        btn.spiner.spinnerColor = UIColor.white
         self.view.addSubview(btn)
         self.view.bringSubview(toFront: canlogin)
     }
-
+    
     @IBAction func onTapButton(_ button: DKTransitionButton) {
         // 开始加载动画
         button.startLoadingAnimation()
-
+        
         if self.canlogin.isOn {
             // 成功，进行界面切换
             button.startSwitchAnimation(1, completion: { [unowned self]() -> () in
@@ -51,9 +51,9 @@ class ViewController: UIViewController {
                 print("badend")
             })
         }
-
+        
     }
-
+    
 }
 
 // MARK: UIViewControllerTransitioningDelegate
@@ -62,8 +62,9 @@ extension ViewController: UIViewControllerTransitioningDelegate {
         // return TKFadeInAnimator(transitionDuration: 0.5, startingAlpha: 0.8)
         return nil
     }
-
+    
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return nil
     }
 }
+
