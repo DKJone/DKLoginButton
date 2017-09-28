@@ -28,9 +28,7 @@ DKLoginButton
 
 ![image](https://raw.githubusercontent.com/wwdc14/TKSubmitTransitionObjective-C/master/Demo.gif)
 # cocopod添加方法
-	```
 	pod 'DKLoginButton'
-	```
 # 手动添加方法
 复制demo中的DKButton文件夹到项目即可
 # 用法

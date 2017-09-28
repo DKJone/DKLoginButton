@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "9.0"
   s.ios.deployment_target = "9.0"
   s.source       = {:git => "https://github.com/DKJone/DKLoginButton.git",:tag => "#{s.version}" }
-  s.source_files  = "loginbutton/DKButton", "loginbutton/DKButton/*.{swift}"
-  s.frameworks  = "UIKit","Foundation"
+  s..ios.source_files = "loginbutton/DKButton/*.{swift}"
+  s.frameworks   = "UIKit","Foundation"
 
 end
