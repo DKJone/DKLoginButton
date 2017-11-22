@@ -1,7 +1,7 @@
 
 DKLoginButton
 ======
-English|[中文文档](https://github.com/DKJone/DKLoginButton/blob/master/README_cn.md)
+English|[中文文档](https://github.com/DKJone/DKLoginButton/blob/master/README_cn.md)   
 A login button with Cool animation and easy to use
 
 [![Platform](http://img.shields.io/badge/platform-ios-blue.svg?style=flat
@@ -13,11 +13,11 @@ A login button with Cool animation and easy to use
 [![CocoaPods](https://img.shields.io/cocoapods/v/TKSubmitTransition.svg)]()
 
 # Version
-**Swift4.0**
-[Swift3.2](https://github.com/DKJone/DKLoginButton/tree/swift3.2)
-[Swift2.0](https://github.com/DKJone/DKLoginButton/tree/swift2.0)
+**Swift4.0**  
+[Swift3.2](https://github.com/DKJone/DKLoginButton/tree/swift3.2)  
+[Swift2.0](https://github.com/DKJone/DKLoginButton/tree/swift2.0)  
 
-Inspiration from [Dribbble](https://dribbble.com/shots/1945593-Login-Home-Screen)
+Inspiration from [Dribbble](https://dribbble.com/shots/1945593-Login-Home-Screen)  
 
 A login button with animation effect is implemented in this project, which is commonly used for **Login/Logoff** and other operations
 
