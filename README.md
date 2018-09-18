@@ -14,6 +14,7 @@ A login button with Cool animation and easy to use
 
 # Version
 **Swift4.2**  
+[Swift4.0](https://github.com/DKJone/DKLoginButton/tree/swift4)
 [Swift3.2](https://github.com/DKJone/DKLoginButton/tree/swift3.2)  
 [Swift2.0](https://github.com/DKJone/DKLoginButton/tree/swift2.0)  
 
