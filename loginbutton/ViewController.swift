@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // 设置场景
-        UIApplication.shared.statusBarStyle = .lightContent
+     //   UIApplication.shared.statusBarStyle = .lightContent
         let bg = UIImageView(image: UIImage(named: "Login"))
         bg.frame = self.view.frame
         self.view.addSubview(bg)
@@ -25,12 +25,12 @@ class ViewController: UIViewController {
         btn.backgroundColor = UIColor(red: 1, green: 0, blue: 128.0 / 255.0, alpha: 1)
         btn.center = self.view.center
         btn.frame.bottom = self.view.frame.height - 60
-        btn.setTitle("Sign in", for: UIControlState())
+        btn.setTitle("Sign in", for: [])
         btn.titleLabel?.font = UIFont(name: "HelveticaNeue-Light", size: 14)
-        btn.addTarget(self, action: #selector(onTapButton(_:)), for: UIControlEvents.touchUpInside)
+        btn.addTarget(self, action: #selector(onTapButton(_:)), for: UIControl.Event.touchUpInside)
         btn.spiner.spinnerColor = UIColor.white
         self.view.addSubview(btn)
-        self.view.bringSubview(toFront: canlogin)
+        self.view.bringSubviewToFront(canlogin)
     }
     
     @IBAction func onTapButton(_ button: DKTransitionButton) {

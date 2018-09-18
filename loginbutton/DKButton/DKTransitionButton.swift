@@ -3,7 +3,7 @@
 //  loginbutton
 //
 //  Created by mac on 16/7/20.
-//  Copyright © 2016年 南京麦伦思. All rights reserved.
+//  Copyright © 2016年 DKJone. All rights reserved.
 //
 
 import UIKit
@@ -30,7 +30,7 @@ open class DKTransitionButton: UIButton, CAAnimationDelegate {
     open var succeedCompletion: (() -> ())? = nil // 成功的回调
     open var failedCompletion: (() -> ())? = nil // 失败的回调
     let springGoEase = CAMediaTimingFunction(controlPoints: 0.45, -0.36, 0.44, 0.92)
-    let shrinkCurve = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+    let shrinkCurve = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
     let expandCurve = CAMediaTimingFunction(controlPoints: 0.95, 0.02, 1, 0.05)
     let shrinkDuration: CFTimeInterval = 0.2
     /// 设置圆角
@@ -61,8 +61,8 @@ open class DKTransitionButton: UIButton, CAAnimationDelegate {
     /// 开始缩小并旋转
     open func startLoadingAnimation() {
         self.isUserInteractionEnabled = false
-        self.cachedTitle = title(for: UIControlState())
-        self.setTitle("", for: UIControlState())
+        self.cachedTitle = title(for: [])
+        self.setTitle("", for: [])
         UIView.animate(withDuration: 0.1, animations: { [unowned self]() -> () in
             self.layer.cornerRadius = self.frame.height / 2
             }, completion: { [unowned self](done) -> () in
@@ -126,7 +126,7 @@ open class DKTransitionButton: UIButton, CAAnimationDelegate {
     /// 回到初始状态
     open func returnToOriginalState() {
         self.layer.removeAllAnimations()
-        self.setTitle(self.cachedTitle, for: UIControlState())
+        self.setTitle(self.cachedTitle, for: [])
         self.spiner.stopAnimation()
         self.isUserInteractionEnabled = true
     }
@@ -137,7 +137,7 @@ open class DKTransitionButton: UIButton, CAAnimationDelegate {
         shrinkAnim.toValue = frame.height
         shrinkAnim.duration = shrinkDuration
         shrinkAnim.timingFunction = shrinkCurve
-        shrinkAnim.fillMode = kCAFillModeForwards
+        shrinkAnim.fillMode = .forwards
         shrinkAnim.isRemovedOnCompletion = false
         layer.add(shrinkAnim, forKey: shrinkAnim.keyPath)
     }
@@ -148,7 +148,7 @@ open class DKTransitionButton: UIButton, CAAnimationDelegate {
         shrinkAnim.toValue = frame.width
         shrinkAnim.duration = shrinkDuration
         // shrinkAnim.timingFunction = expandCurve
-        shrinkAnim.fillMode = kCAFillModeForwards
+        shrinkAnim.fillMode = .forwards
         shrinkAnim.isRemovedOnCompletion = false
         layer.add(shrinkAnim, forKey: shrinkAnim.keyPath)
     }
@@ -161,7 +161,7 @@ open class DKTransitionButton: UIButton, CAAnimationDelegate {
         expandAnim.timingFunction = expandCurve
         expandAnim.duration = 0.5
         expandAnim.delegate = self
-        expandAnim.fillMode = kCAFillModeForwards
+        expandAnim.fillMode = .forwards
         expandAnim.isRemovedOnCompletion = false
         layer.add(expandAnim, forKey: expandAnim.keyPath)
     }
@@ -198,7 +198,7 @@ open class DKTransitionButton: UIButton, CAAnimationDelegate {
     ///   - completion: 动画完成执行的闭包
     open func moveToCenterExpand(_ delay: TimeInterval, completion: (() -> ())?) {
         self.succeedCompletion = completion
-        self.setTitle("", for: UIControlState())
+        self.setTitle("", for: [])
         _ = Timer.schedule(delay: delay) { [unowned self] time in
             UIView.animate(withDuration: 0.8, animations: {
                 self.center = (UIApplication.shared.keyWindow?.center

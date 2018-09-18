@@ -13,7 +13,7 @@ A login button with Cool animation and easy to use
 [![CocoaPods](https://img.shields.io/cocoapods/v/TKSubmitTransition.svg)]()
 
 # Version
-**Swift4.0**  
+**Swift4.2**  
 [Swift3.2](https://github.com/DKJone/DKLoginButton/tree/swift3.2)  
 [Swift2.0](https://github.com/DKJone/DKLoginButton/tree/swift2.0)  
 

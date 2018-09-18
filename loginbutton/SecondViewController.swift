@@ -18,7 +18,7 @@ class SecondViewController: UIViewController {
         bg.frame = self.view.frame
         button.backgroundColor = UIColor(red: 1, green: 0, blue: 128.0 / 255.0, alpha: 1)
         self.view.addSubview(bg)
-        self.view.bringSubview(toFront: button)
+        self.view.bringSubviewToFront(button)
 
     }
 
