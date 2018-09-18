@@ -13,10 +13,10 @@ A login button with Cool animation and easy to use
 [![CocoaPods](https://img.shields.io/cocoapods/v/TKSubmitTransition.svg)]()
 
 # Version
-**Swift4.2**  
-[Swift4.0](https://github.com/DKJone/DKLoginButton/tree/swift4)
-[Swift3.2](https://github.com/DKJone/DKLoginButton/tree/swift3.2)  
-[Swift2.0](https://github.com/DKJone/DKLoginButton/tree/swift2.0)  
+**Swift4.2**  (other swift version↓)  
+[Swift4.0](https://github.com/DKJone/DKLoginButton/tree/swift4)   
+[Swift3.2](https://github.com/DKJone/DKLoginButton/tree/swift3.2)   
+[Swift2.0](https://github.com/DKJone/DKLoginButton/tree/swift2.0)    
 
 Inspiration from [Dribbble](https://dribbble.com/shots/1945593-Login-Home-Screen)  
 

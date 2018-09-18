@@ -13,6 +13,7 @@
 		04997B631D3F0A8F00D1FF45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04997B621D3F0A8F00D1FF45 /* Assets.xcassets */; };
 		04997B661D3F0A8F00D1FF45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04997B641D3F0A8F00D1FF45 /* LaunchScreen.storyboard */; };
 		04997B931D3F540300D1FF45 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04997B921D3F540300D1FF45 /* SecondViewController.swift */; };
+		11680D5B2150A27C001142E8 /* README_cn.md in Resources */ = {isa = PBXBuildFile; fileRef = 11680D5A2150A27C001142E8 /* README_cn.md */; };
 		117D32541E03C96200BCC2F6 /* CGRectEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117D324F1E03C96200BCC2F6 /* CGRectEx.swift */; };
 		117D32551E03C96200BCC2F6 /* DKTransitionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117D32501E03C96200BCC2F6 /* DKTransitionButton.swift */; };
 		117D32561E03C96200BCC2F6 /* DKViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117D32511E03C96200BCC2F6 /* DKViewControllerExt.swift */; };
@@ -48,6 +49,7 @@
 		04997B6C1D3F0A9000D1FF45 /* loginbuttonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = loginbuttonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04997B771D3F0A9000D1FF45 /* loginbuttonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = loginbuttonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04997B921D3F540300D1FF45 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		11680D5A2150A27C001142E8 /* README_cn.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README_cn.md; sourceTree = "<group>"; };
 		117D324F1E03C96200BCC2F6 /* CGRectEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRectEx.swift; sourceTree = "<group>"; };
 		117D32501E03C96200BCC2F6 /* DKTransitionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKTransitionButton.swift; sourceTree = "<group>"; };
 		117D32511E03C96200BCC2F6 /* DKViewControllerExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKViewControllerExt.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 		04997B4F1D3F0A8F00D1FF45 = {
 			isa = PBXGroup;
 			children = (
+				11680D5A2150A27C001142E8 /* README_cn.md */,
 				11E9A1B91F7BC5DB008B040D /* README.md */,
 				04997B5A1D3F0A8F00D1FF45 /* loginbutton */,
 				04997B591D3F0A8F00D1FF45 /* Products */,
@@ -235,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04997B661D3F0A8F00D1FF45 /* LaunchScreen.storyboard in Resources */,
+				11680D5B2150A27C001142E8 /* README_cn.md in Resources */,
 				04997B631D3F0A8F00D1FF45 /* Assets.xcassets in Resources */,
 				04997B611D3F0A8F00D1FF45 /* Main.storyboard in Resources */,
 			);
