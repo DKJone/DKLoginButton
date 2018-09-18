@@ -10,7 +10,7 @@ DKLoginButton
 )](http://mit-license.org)
 [![CocoaPods](https://img.shields.io/cocoapods/v/TKSubmitTransition.svg)]()
 
-**语言:Swift4.0!! :cat:** (其他swift版本点击下方获取)   
+**语言:Swift4.2!! :cat:** (其他swift版本点击下方获取)   
 [Swift4.0](https://github.com/DKJone/DKLoginButton/tree/swift4)   
 [Swift3.2](https://github.com/DKJone/DKLoginButton/tree/swift3.2)  
 [Swift2.0](https://github.com/DKJone/DKLoginButton/tree/swift2.0)  
